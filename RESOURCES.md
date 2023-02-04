@@ -31,3 +31,6 @@ Resources
 10. Max RNBO https://cycling74.com/products/rnbo
 11. Centre De Pompidue https://www.google.com/maps/place/The+Centre+Pompidou/@48.8589752,2.347218,90a,35y,56.87h,70.43t/data=!3m1!1e3!4m5!3m4!1s0x47e66e1c09b820a3:0xb7ac6c7e59dc3345!8m2!3d48.860642!4d2.352245
 12. ANTIPHØN https://newart.city/show/antiphon
+
+2/1
+1. iCubeX https://www.icubex.com/
