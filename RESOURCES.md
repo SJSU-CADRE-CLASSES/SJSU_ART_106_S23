@@ -34,3 +34,8 @@ Resources
 
 2/1
 1. iCubeX https://www.icubex.com/
+
+2/7
+1. Rafael Lozano-Hemmer https://www.lozano-hemmer.com/voice_array.php
+2. Cycling74 Forum https://cycling74.com/forums
+3. max cookbook https://music.arts.uci.edu/dobrian/maxcookbook/sixteen-harmonics
