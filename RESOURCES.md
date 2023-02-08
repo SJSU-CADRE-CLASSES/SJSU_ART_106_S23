@@ -39,3 +39,4 @@ Resources
 1. Rafael Lozano-Hemmer https://www.lozano-hemmer.com/voice_array.php
 2. Cycling74 Forum https://cycling74.com/forums
 3. max cookbook https://music.arts.uci.edu/dobrian/maxcookbook/sixteen-harmonics
+4. make noise synths https://www.makenoisemusic.com/
