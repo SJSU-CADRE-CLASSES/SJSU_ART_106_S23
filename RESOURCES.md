@@ -40,3 +40,7 @@ Resources
 2. Cycling74 Forum https://cycling74.com/forums
 3. max cookbook https://music.arts.uci.edu/dobrian/maxcookbook/sixteen-harmonics
 4. make noise synths https://www.makenoisemusic.com/
+
+1. New Ways of Seeing https://jamesbridle.com/new-ways-of-seeing
+2. Ways of Seeing https://www.youtube.com/watch?v=0pDE4VX_9Kk&ab_channel=tw19751
+3. Maya Daren - Meshes of the Afternoon https://vimeo.com/ondemand/meshes/109136225
