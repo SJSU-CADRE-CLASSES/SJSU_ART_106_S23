@@ -45,3 +45,10 @@ Resources
 1. New Ways of Seeing https://jamesbridle.com/new-ways-of-seeing
 2. Ways of Seeing https://www.youtube.com/watch?v=0pDE4VX_9Kk&ab_channel=tw19751
 3. Maya Daren - Meshes of the Afternoon https://vimeo.com/ondemand/meshes/109136225
+
+2/21
+1. Tristan Perich - microtonal wall https://vimeo.com/45225412
+2. Bel Biv DeVoe - https://vimeo.com/45225412
+3. Hito Stryl - Bubble Vision https://youtu.be/T1Qhy0_PCjs
+4. Kubuntu 3D Desktop - https://youtu.be/4QokOwvPxrE
+5. Marshal Rosenberg - Language of Non Violent Communication https://youtu.be/ThZD-kL1I9o
