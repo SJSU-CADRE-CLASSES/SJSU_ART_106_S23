@@ -52,3 +52,7 @@ Resources
 3. Hito Stryl - Bubble Vision https://youtu.be/T1Qhy0_PCjs
 4. Kubuntu 3D Desktop - https://youtu.be/4QokOwvPxrE
 5. Marshal Rosenberg - Language of Non Violent Communication https://youtu.be/ThZD-kL1I9o
+
+2/28
+1. oscilloscope mushrooms https://www.youtube.com/watch?v=rtR63-ecUNo&t=171s&ab_channel=JerobeamFenderson
+2. Wave Video for youtube conversion https://wave.video/
