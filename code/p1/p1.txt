@@ -1,0 +1,49 @@
+
+void setup() {
+  size(200,200);
+  
+  background(0);
+  
+}
+
+void draw() {
+  background(0);
+  linemaker();
+  boxermaker(20,20.0);
+  circlemaker(10,10);
+  circlemaker(-30,10);
+  boxermaker(-10,10.0);
+ // boxermaker(-40,100.0);
+  saveFrame("frames/ex1-######.png");
+}
+
+
+void boxermaker(int off, float r) {
+  
+  float ran = random(r);
+  noStroke();
+   fill(240);
+  for(int i = 0; i <200; i+=10) {
+    rect(i+off,i,ran,ran);
+  }
+}
+
+
+void circlemaker(int off, int sz) { 
+ // float ran = random(r);
+ noStroke(); 
+  fill(90);
+  for(int i = 0; i <200; i+=10) {
+    ellipse(i,i+off,sz,sz);
+  }
+  
+  
+  
+}
+
+void linemaker() {  
+  stroke(200,0,0);
+  for(int i = 0; i <200; i+=10) {
+    line(i,i,i+20,i+20);
+  }
+}

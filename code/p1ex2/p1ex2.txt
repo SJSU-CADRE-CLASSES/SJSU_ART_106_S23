@@ -1,0 +1,15 @@
+PImage pix;
+
+void setup() {
+  size(500,500 );
+  pix = loadImage("Burger.jpg");
+  
+  //noLoop();
+}
+
+void draw() {
+  image(pix, mouseX, mouseY,pmouseX,pmouseY);
+  
+  
+  //saveFrame("frames/ex2-######.png");
+}
