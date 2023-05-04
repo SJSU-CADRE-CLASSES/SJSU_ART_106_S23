@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html class="a-html">
+  <head>
+    <meta charset="utf-8" />
+    <title>animorph.es</title>
+    <meta name="description" content="Hello, World! - A-Frame" />
+    <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
+    <script></script>
+  </head>
+  <body>
+    <script>
+      AFRAME.registerComponent('glass_position_one', {
+        schema: {
+          inputs: { default: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] },
+          lastMessage: { default: 0 },
+        },
+
+        init: function () {
+          console.log('Attempting to establish websocket connection');
+          //const wsantiph = "wss://antiph.onl/ws";
+          const wsantiph = 'ws://localhost:3030';
+          const ws = new WebSocket(wsantiph);
+          ws.onopen = () => {
+            console.log('Websocket established');
+          };
+          //Parse data from Max into room objects
+          //Executes everytime we get a message
+          ws.onmessage = (e) => {
+            lastMessage = e.data;
+            let r = /(-?\d+\.?\d*)/g;
+            let vals = lastMessage.match(r);
+
+            if (vals && vals.length >= 1) {
+              inputs = vals.map((el) => Number(el));
+              console.log(inputs);
+              this.el.object3D.position.set(inputs[0], inputs[1], inputs[2]);
+              this.el.object3D.rotation.set(inputs[3], inputs[4], inputs[5]);
+              this.el.object3D.scale.set(inputs[6], inputs[7], inputs[8]);
+            } else {
+              console.log('Unexpected message format: ' + lastMessage);
+            }
+          };
+        },
+      });
+
+      AFRAME.registerComponent('glass_position_two', {
+        schema: {
+          inputs: { default: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] },
+          lastMessage: { default: 0 },
+        },
+
+        init: function () {
+          console.log('Attempting to establish websocket connection');
+          //const wsantiph = "wss://antiph.onl/ws";
+          const wsantiph = 'ws://localhost:3030';
+          const ws = new WebSocket(wsantiph);
+          ws.onopen = () => {
+            console.log('Websocket established');
+          };
+          //Parse data from Max into room objects
+          //Executes everytime we get a message
+          ws.onmessage = (e) => {
+            lastMessage = e.data;
+            let r = /(-?\d+\.?\d*)/g;
+            let vals = lastMessage.match(r);
+
+            if (vals && vals.length >= 1) {
+              inputs = vals.map((el) => Number(el));
+              console.log(inputs);
+              this.el.object3D.position.set(inputs[0], inputs[1], inputs[2]);
+              this.el.object3D.rotation.set(inputs[9], inputs[10], inputs[11]);
+              this.el.object3D.scale.set(inputs[6], inputs[7], inputs[8]);
+            } else {
+              console.log('Unexpected message format: ' + lastMessage);
+            }
+          };
+        },
+      });
+    </script>
+
+    <a-scene class="fullscreen" canvas="" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="enabled: false" auto-enter-vr="">
+      <a-assets><a-asset-item id="glassModel" src="env.glb"></a-asset-item></a-assets>
+      <a-assets><a-asset-item id="glassModelTwo" src="env.glb"></a-asset-item></a-assets>
+      <a-entity position="" rotation="" scale="" visible="">
+        <a-camera position="0 0 0" rotation="0 0 0" scale="" visible="" camera="" look-controls="" wasd-controls=""></a-camera>
+      </a-entity>
+      <!-- <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4" scale="" visible="" material="" geometry=""></a-plane> -->
+      <a-sky color="#ffffff" position="" rotation="" scale="" visible="" material="" geometry="" sky_color></a-sky>
+      <!-- <a-entity position="1 1 -4" geometry="primitive: box; width: 1; height: 1;" color="#fff000" glassPositionOne></a-entity> -->
+      <a-entity gltf-model="#glassModel" position="-1 1 -4" rotation="0 0 0" scale="4 4 4" glass_position_one></a-entity>
+      <a-entity gltf-model="#glassModelTwo" position="-1 1 -4" rotation="0 0 0" scale="4 4 4" glass_position_two></a-entity>
+      <canvas class="a-canvas a-grab-cursor" data-aframe-canvas="true" width="2752" height="1288" style="width: 1376px; height: 644px"></canvas>
+      <a-entity light="" data-aframe-default-light="" aframe-injected="" position="" rotation="" scale="" visible="" ></a-entity>
+      <a-entity light="" data-aframe-default-light="" aframe-injected="" position="" rotation="" scale="" visible="" ></a-entity></a-scene>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "dgram": "^1.0.1",
+    "ws": "^8.5.0"
+  },
+  "name": "bvh_restructure",
+  "description": "To send BVH data to NAC and to better structure the data sending of the project, we follow a format as defined below:",
+  "version": "1.0.0",
+  "main": "NAC.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
