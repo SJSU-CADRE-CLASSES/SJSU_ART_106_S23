@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+  <head>
+    <title>multi socket</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { 
+        font-family: 'Montserrat', sans-serif; 
+        color: white;
+        background: black;
+      }
+
+      #container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: 100vh;
+        font-size: 6rem;
+      }
+      .form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; }
+      input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
+      button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
+    </style>
+  </head>
+  <body>
+    
+    <div id="container">
+      <div id="message"></div>
+    </div>
+    <div class="form">
+      <input id="m"/><button>Send</button>
+    </div>
+
+    <audio id="myAudio">
+      <source src="https://www.w3schools.com/tags/horse.ogg" type="audio/ogg">
+      <source src="horse.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>    
+
+    <script src="/socket.io/socket.io.js"></script>
+    
+
+    <script>
+    //pass data back to server
+      document.addEventListener('DOMContentLoaded', function() {
+        const socket = io();
+        document.querySelector('button').addEventListener('click', function(e) {
+          e.preventDefault();
+          socket.emit('talkback', document.querySelector('#m').value);
+          document.querySelector('#m').value = '';
+        });
+
+        //bring data in from server
+        socket.on('message', function(msg) {
+          document.querySelector('#message').innerText = msg;
+          if (msg == 'play'){
+            soundEffect.stop();
+            soundEffect.play();
+            //e.preventDefault();
+            socket.emit('talkback', 'adsfsdfs');
+            //document.querySelector('#m').value = 'adsfsdfs';
+          };
+          console.log(msg);
+        });
+      });
+
+      // var x = document.getElementById("myAudio"); 
+      
+      // function playAudio() { 
+      //   x.play();
+      // }
+
+      const soundEffect = new Audio();
+
+      // onClick of first interaction on page before I need the sounds
+      
+
+      // later on when you actually want to play a sound at any point without user interaction
+      soundEffect.src = 'https://www.w3schools.com/tags/horse.ogg';
+      soundEffect.play();
+
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "antiph.onl",
+  "version": "1.0.0",
+  "main": "Public_API.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ws": "^7.5.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CNMAT/antiphon.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CNMAT/antiphon/issues"
+  },
+  "homepage": "https://github.com/CNMAT/antiphon#readme",
+  "description": ""
+}

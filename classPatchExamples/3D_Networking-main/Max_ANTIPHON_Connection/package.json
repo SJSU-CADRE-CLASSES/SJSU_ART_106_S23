@@ -1,0 +1,15 @@
+{
+  "name": "max_antiphon_connection",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gallerysender.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ws": "^8.13.0"
+  }
+}
